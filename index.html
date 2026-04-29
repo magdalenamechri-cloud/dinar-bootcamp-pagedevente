@@ -284,6 +284,18 @@ nav.scrolled{
   display:inline-block;
   border:1px solid var(--rouge);
 }
+.hero-meta .hero-meta-date{
+  background:var(--rouge);
+  color:var(--jaune);
+  padding:6px 12px;
+  font-weight:700;
+  letter-spacing:1px;
+  border:1px solid var(--rouge);
+}
+.hero-meta .hero-meta-date::before{
+  background:var(--jaune);
+  border-color:var(--jaune);
+}
 
 /* hero right — photo */
 .hero-right{
@@ -1309,6 +1321,41 @@ nav.scrolled{
   border-color:var(--creme);
   color:var(--creme);
 }
+.price-datebadge{
+  background:var(--jaune);
+  color:var(--rouge);
+  text-align:center;
+  padding:18px 16px 16px;
+  margin:0 -32px 32px;
+  border-top:2px solid var(--jaune);
+  border-bottom:2px solid var(--jaune);
+  position:relative;
+}
+.price-datebadge-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-weight:700;
+  margin-bottom:4px;
+  opacity:0.85;
+}
+.price-datebadge-date{
+  font-family:'Big Shoulders Display',sans-serif;
+  font-size:42px;
+  font-weight:900;
+  letter-spacing:2px;
+  line-height:1;
+  margin-bottom:6px;
+}
+.price-datebadge-extra{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:700;
+  opacity:0.8;
+}
 .price-start{
   font-family:'JetBrains Mono',monospace;
   font-size:9px;
@@ -1324,7 +1371,7 @@ nav.scrolled{
 .bonus-section{margin-top:120px}
 .bonus-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(2,1fr);
   gap:24px;
   margin-top:40px;
 }
@@ -1736,8 +1783,8 @@ footer{
     </div>
     <div class="hero-meta">
       <span>10 semaines</span>
-      <span>15 places max</span>
-      <span>Accès lifetime</span>
+      <span>10 places · Cohorte fondatrice</span>
+      <span class="hero-meta-date">Démarrage 18 mai 2026</span>
     </div>
   </div>
   <div class="hero-right">
@@ -1757,7 +1804,7 @@ footer{
         <div class="stat-label">Semaines</div>
       </div>
       <div>
-        <div class="stat-num">15</div>
+        <div class="stat-num">10</div>
         <div class="stat-label">Places</div>
       </div>
       <div>
@@ -1841,10 +1888,10 @@ footer{
   <div class="section-tag">02 · Qui je suis</div>
   <div class="story-grid">
     <div class="story-left">
-      <!-- Pour que ta photo apparaisse : dépose "magdalena.jpg" dans le même dossier que ce HTML -->
+      <!-- Pour que ta photo apparaisse : dépose "magdalenabis.jpg" dans le même dossier que ce HTML -->
       <div class="story-photo">
-        <div class="fallback">DÉPOSE "magdalena.jpg"<br>DANS CE DOSSIER</div>
-        <img src="magdalena.jpg" alt="Magdalena Mechri" onerror="this.style.display='none'">
+        <div class="fallback">DÉPOSE "magdalenabis.jpg"<br>DANS CE DOSSIER</div>
+        <img src="magdalenabis.jpg" alt="Magdalena Mechri" onerror="this.style.display='none'">
         <div class="corner tl"></div>
         <div class="corner tr"></div>
         <div class="corner bl"></div>
@@ -2015,7 +2062,7 @@ footer{
 <section class="offre-section section reveal" id="rejoindre">
   <div class="section-tag">05 · L'offre</div>
   <h2 class="offre-heading">Ce que tu reçois.<br><span class="highlight"><em>Concrètement.</em></span></h2>
-  <p class="offre-sub">Première cohorte fondatrice. 15 places maximum. Accès lifetime au contenu — uniquement pour cette cohorte.</p>
+  <p class="offre-sub">Première cohorte fondatrice. <strong>10 places maximum.</strong> Démarrage le <strong>18 mai 2026</strong>. 10 semaines d'accompagnement intensif en co-construction.</p>
 
   <div class="offre-grid">
     <div class="offre-includes">
@@ -2065,8 +2112,16 @@ footer{
 
     <div class="price-card">
       <span class="price-badge">Cohorte Fondatrice</span>
+
+      <!-- BADGE DATE — proéminent en haut de la carte prix -->
+      <div class="price-datebadge">
+        <div class="price-datebadge-label">Démarrage</div>
+        <div class="price-datebadge-date">18 MAI 2026</div>
+        <div class="price-datebadge-extra">10 places · 10 semaines</div>
+      </div>
+
       <!-- PRIX_DISPLAY --><div class="price-amount"><span class="price-currency">€</span>597</div>
-      <div class="price-period">Paiement unique · accès lifetime</div>
+      <div class="price-period">Paiement unique · 10 semaines d'accompagnement</div>
       <div class="price-divider"></div>
       <!-- PRIX_DISPLAY --><div class="price-alt"><strong>2 × 315€</strong> — paiement en deux fois</div>
       <!-- PRIX_DISPLAY --><div class="price-note">Le paiement en 2× revient à 630€ au total (+33€). Paiement par carte via Stripe.</div>
@@ -2083,7 +2138,7 @@ footer{
       <a href="https://buy.stripe.com/5kQ3cucxX9qd8G1eJp2go00" class="price-cta" target="_blank" rel="noopener">Je rejoins la cohorte →</a>
       <!-- EMAIL_CONTACT : adresse de contact pour les questions -->
       <a href="mailto:mechri.magdalena@gmail.com?subject=Question%20DINAR%20Bootcamp" class="price-cta-secondary">Je pose une question d'abord</a>
-      <div class="price-start">Démarrage le 12 mai 2026 · 15 places</div>
+      <div class="price-start">10 places maximum · paiement sécurisé Stripe</div>
     </div>
   </div>
 
@@ -2100,11 +2155,6 @@ footer{
         <span class="bonus-tag">Bonus #2 · Appel privé</span>
         <h3 class="bonus-title">Appel de bienvenue individuel</h3>
         <p class="bonus-desc">20 minutes avec Magdalena avant le démarrage. On identifie ensemble ton profil et tes priorités pour les 10 semaines.</p>
-      </div>
-      <div class="bonus-card">
-        <span class="bonus-tag">Exclusif cohorte 1</span>
-        <h3 class="bonus-title">Accès Lifetime au contenu</h3>
-        <p class="bonus-desc">Toutes les vidéos, tous les prompts, toutes les mises à jour futures — à vie. Uniquement pour cette première cohorte.</p>
       </div>
     </div>
   </div>
@@ -2189,12 +2239,12 @@ footer{
       <div class="faq-a">Tous les lives sont enregistrés et disponibles en replay sur Circle. Tu peux poser tes questions en avance ou dans le fil communauté — je réponds de toute façon.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">Pourquoi seulement 15 places ?</div>
-      <div class="faq-a">Pour que l'accompagnement soit réel. 15 femmes, c'est une taille qui permet les échanges, la personnalisation, et que chacune soit vraiment vue. Ce n'est pas un MOOC. C'est une cohorte.</div>
+      <div class="faq-q">Pourquoi seulement 10 places ?</div>
+      <div class="faq-a">Pour que l'accompagnement soit réel. 10 femmes, c'est une taille qui permet les échanges, la personnalisation, et que chacune soit vraiment vue. Ce n'est pas un MOOC. C'est une cohorte intime.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Et si je ne suis pas satisfaite ?</div>
-      <div class="faq-a">Tu as 14 jours après le démarrage de la cohorte pour demander un remboursement intégral, sans justification. Au-delà, aucun remboursement — mais tu conserves l'accès lifetime au contenu.</div>
+      <div class="faq-a">Tu as 14 jours après le démarrage de la cohorte pour demander un remboursement intégral, sans justification. Au-delà, aucun remboursement — mais tu conserves l'accès au contenu et à la communauté pour toute la durée du programme.</div>
     </div>
   </div>
 </section>
